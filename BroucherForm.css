@@ -173,18 +173,18 @@
 .theme-entry .runtime-form.pi-has-brochure-form [name="Arabic_riyad"],
 .theme-entry .runtime-form.pi-has-brochure-form [name="Arabic_jeddah"],
 .theme-entry .runtime-form.pi-has-brochure-form [name="Arabic_Alkhobar"] {
-    display: block !important;
-    width: 100% !important;
+    /* display: block !important;
+    width: 100% !important; */
     margin: 8px 0 0 !important;
     padding: 7px 0 0 !important;
-    border-top: 1px solid #dfc8b7 !important;
+    /* border-top: 1px solid #dfc8b7 !important; */
     color: #9b694d !important;
     font-family: var(--font-body, Arial, sans-serif) !important;
     font-size: 12px !important;
     font-weight: 500 !important;
     line-height: 1.6 !important;
     text-align: right !important;
-    direction: rtl !important;
+    /* direction: rtl !important; */
     box-sizing: border-box !important;
 }
 
