@@ -10,11 +10,20 @@
 
         form.classList.add('pi-has-brochure-form');
 
-        var header = form.querySelector('.panel[name="RetalCatalogue.Form Area Item"] [name="Header_cell"]');
-        if (header) header.classList.add('retal-brochure-header');
+        var headerTable = form.querySelector(
+            '.panel[name="RetalCatalogue.Form Area Item"] .root-table[name="Table"]'
+        );
 
-        var catalogue = form.querySelector('.panel[name="RetalCatalogue.Form Area Item1"] .root-table[name="Table"]');
+        if (headerTable) {
+            headerTable.classList.add('retal-brochure-header-layout');
+        }
+
+        var catalogue = form.querySelector(
+            '.panel[name="RetalCatalogue.Form Area Item1"] .root-table[name="Table"]'
+        );
+
         if (!catalogue) return false;
+
         catalogue.classList.add('retal-project-catalogue-grid');
 
         var imageLabels = catalogue.querySelectorAll(
@@ -30,10 +39,14 @@
 
         for (var i = 0; i < imageLabels.length; i++) {
             var imageLabel = imageLabels[i];
+
             imageLabel.classList.add('retal-project-image');
 
             var card = imageLabel.closest('.editor-cell');
-            if (card) card.classList.add('retal-project-card');
+
+            if (card) {
+                card.classList.add('retal-project-card');
+            }
         }
 
         var sectionNames = [
@@ -49,6 +62,7 @@
 
             if (sectionLabel) {
                 var sectionCell = sectionLabel.closest('.editor-cell');
+
                 if (sectionCell) {
                     sectionCell.classList.add('retal-project-section-heading');
                 }
@@ -60,6 +74,7 @@
 
     function initialize() {
         if (applyRetalBrochureClasses()) return;
+
         if (!document.body || typeof MutationObserver === 'undefined') return;
 
         var observer = new MutationObserver(function () {
