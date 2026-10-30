@@ -745,3 +745,8 @@
         padding: 10px 10px 0 !important;
     }
 }
+
+/* Adding this code to place the hyperlink in the center */
+.theme-entry .runtime-form.pi-has-brochure-form .hyperlinkTopPanel {
+    margin-left: 85px !important;
+}
