@@ -12,7 +12,8 @@
 }
 
 .theme-entry .runtime-form.pi-has-brochure-form .form {
-    background: transparent !important;
+    /* background: transparent !important; */
+    background-color: #f6f1ee !important;
 }
 
 .theme-entry .runtime-form.pi-has-brochure-form .panel[name="RetalCatalogue.Form Area Item"],
